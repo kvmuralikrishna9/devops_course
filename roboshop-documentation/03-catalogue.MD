@@ -117,7 +117,9 @@ enabled=1
 gpgkey=https://pgp.mongodb.com/server-7.0.asc
 ```
 ```
-yum install mongodb-org-shell -y
+yum install mongodb-org-shell -y  (Older version - not working)
+yum install mongodb-mongosh -y
+
 ```
 
 Load Schema
