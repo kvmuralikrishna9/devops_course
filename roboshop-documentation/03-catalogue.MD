@@ -117,15 +117,20 @@ enabled=1
 gpgkey=https://pgp.mongodb.com/server-7.0.asc
 ```
 ```
+<<<<<<< Updated upstream
 yum install mongodb-org-shell -y  (Older version - not working)
 yum install mongodb-mongosh -y
 
+=======
+sudo yum install mongodb-mongosh-shared-openssl3 
+yum install mongodb-org-shell -y
+>>>>>>> Stashed changes
 ```
 
 Load Schema
 
 ```
-mongo --host MONGODB-SERVER-IPADDRESS </app/schema/catalogue.js
+mongosh --host MONGODB-SERVER-IPADDRESS < /app/schema/catalogue.js
 ```
 
 **NOTE: You need to update catalogue server ip address in frontend configuration. Configuration file is /etc/nginx/default.d/roboshop.conf**
