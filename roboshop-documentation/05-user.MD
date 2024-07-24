@@ -99,20 +99,28 @@ vim /etc/yum.repos.d/mongo.repo
 ```
 
 ```
-[mongodb-org-4.2]
+[mongodb-org-7.0]
 name=MongoDB Repository
-baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.2/x86_64/
-gpgcheck=0
+baseurl=https://repo.mongodb.org/yum/amazon/2023/mongodb-org/7.0/x86_64/
+gpgcheck=1
 enabled=1
+gpgkey=https://pgp.mongodb.com/server-7.0.asc
 ```
 ```
-yum install mongodb-org-shell -y
+yum install mongodb-mongosh -y
+```
+If we get openssl error,
+```
+yum remove mongodb-mongosh -y
+yum install mongodb-mongosh-shared-openssl3
+yum install mongodb-mongosh -y
+systemctl restart catalouge.service
 ```
 
 Load Schema
 
 ```
-mongo --host MONGODB-SERVER-IPADDRESS </app/schema/user.js
+mongosh --host MONGODB-SERVER-IPADDRESS < /app/schema/user.js
 ```
 
 

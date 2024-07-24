@@ -117,7 +117,14 @@ enabled=1
 gpgkey=https://pgp.mongodb.com/server-7.0.asc
 ```
 ```
-yum install mongodb-org-shell -y
+yum install mongodb-mongosh -y
+```
+If we get openssl error, 
+```
+yum remove mongodb-mongosh -y
+yum install mongodb-mongosh-shared-openssl3
+yum install mongodb-mongosh -y
+systemctl restart catalouge.service
 ```
 
 Load Schema
