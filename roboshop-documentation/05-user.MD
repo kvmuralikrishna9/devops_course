@@ -113,7 +113,7 @@ yum install mongodb-org-shell -y
 Load Schema
 
 ```
-mongo --host MONGODB-SERVER-IPADDRESS </app/schema/user.js
+mongosh --host MONGODB-SERVER-IPADDRESS < /app/schema/user.js
 ```
 
 
