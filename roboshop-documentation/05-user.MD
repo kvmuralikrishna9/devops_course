@@ -121,7 +121,7 @@ If we get openssl error,
 yum remove mongodb-mongosh -y
 yum install mongodb-mongosh-shared-openssl3
 yum install mongodb-mongosh -y
-systemctl restart catalouge.service
+systemctl restart user.service
 ```
 
 
