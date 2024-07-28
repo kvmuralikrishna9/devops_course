@@ -129,7 +129,7 @@ mongosh --host MONGODB-SERVER-IPADDRESS < /app/schema/catalogue.js
 If we get openssl error, 
 ```
 yum remove mongodb-mongosh -y
-yum install mongodb-mongosh-shared-openssl3
+yum install mongodb-mongosh-shared-openssl3 -y
 yum install mongodb-mongosh -y
 systemctl restart catalogue.service
 ```
