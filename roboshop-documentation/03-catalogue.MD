@@ -124,13 +124,17 @@ If we get openssl error,
 yum remove mongodb-mongosh -y
 yum install mongodb-mongosh-shared-openssl3
 yum install mongodb-mongosh -y
-systemctl restart catalogue.service
 ```
 
 Load Schema
 
 ```
 mongosh --host MONGODB-SERVER-IPADDRESS < /app/schema/catalogue.js
+```
+
+Restart catalogue service
+```
+systemctl restart catalogue.service
 ```
 
 **NOTE: You need to update catalogue server ip address in frontend configuration. Configuration file is /etc/nginx/default.d/roboshop.conf**
