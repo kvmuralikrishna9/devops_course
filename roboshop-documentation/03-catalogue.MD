@@ -123,7 +123,7 @@ yum install mongodb-mongosh -y
 Load Schema
 
 ```
-mongosh --host MONGODB-SERVER-IPADDRESS < /app/schema/catalogue.js
+mongosh --host mongodb.vrpproducts.online < /app/schema/catalogue.js
 ```
 
 If we get openssl error, 
