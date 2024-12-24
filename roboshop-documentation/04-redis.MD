@@ -2,9 +2,9 @@
 
 ## IF USING AMAZON LINUX 2023, install redis6 instead of simple redis
 
-...
-dnf install redis6
-...
+```
+yum install redis 6
+```
 
 Redis is used for in-memory data storage(Caching) and allows users to access the data of database over API.
 
