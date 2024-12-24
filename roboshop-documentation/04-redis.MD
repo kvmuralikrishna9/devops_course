@@ -3,7 +3,7 @@
 ### IF USING AMAZON LINUX 2023, install redis6 instead of simple redis
 
 ```
-yum install redis 6
+yum install redis6
 ```
 ### IF using any other OS plese check which redis will it support
 
