@@ -120,6 +120,13 @@ gpgkey=https://pgp.mongodb.com/server-7.0.asc
 yum install mongodb-mongosh -y
 ```
 
+If we get openssl error, 
+```
+yum remove mongodb-mongosh -y
+yum install mongodb-mongosh-shared-openssl3
+yum install mongodb-mongosh -y
+```
+
 Load Schema
 
 ```
@@ -131,6 +138,11 @@ If we get openssl error,
 yum remove mongodb-mongosh -y
 yum install mongodb-mongosh-shared-openssl3 -y
 yum install mongodb-mongosh -y
+systemctl restart catalogue.service
+```
+
+Restart catalogue service
+```
 systemctl restart catalogue.service
 ```
 
