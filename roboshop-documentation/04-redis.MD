@@ -1,4 +1,7 @@
 ### Redis
+
+## IF USING AMAZON LINUX 2023, install redis6 instead of simple redis
+
 Redis is used for in-memory data storage(Caching) and allows users to access the data of database over API.
 
 Redis is offering the repo file as a rpm. Lets install it
