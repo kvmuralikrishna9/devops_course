@@ -1,4 +1,5 @@
-### User
+# User
+
 User is a microservice that is responsible for User Logins and Registrations Service in RobotShop e-commerce portal.
 
 Setup NodeJS repos. Vendor is providing a script to setup the repos.
@@ -33,9 +34,6 @@ curl -L -o /tmp/user.zip https://roboshop-builds.s3.amazonaws.com/user.zip
 ```
 
 ```
-cd /app 
-```
-```
 unzip /tmp/user.zip
 ```
 
@@ -64,8 +62,8 @@ Description = User Service
 [Service]
 User=roboshop
 Environment=MONGO=true
-Environment=REDIS_HOST=<REDIS-SERVER-IP>
-Environment=MONGO_URL="mongodb://<MONGODB-SERVER-IP-ADDRESS>:27017/users"
+Environment=REDIS_HOST=redis6.vrpproducts.online
+Environment=MONGO_URL="mongodb://mongodb.vrpproducts.online:27017/users"
 ExecStart=/bin/node /app/server.js
 SyslogIdentifier=user
 
@@ -113,7 +111,7 @@ yum install mongodb-mongosh -y
 Load Schema
 
 ```
-mongosh --host MONGODB-SERVER-IPADDRESS < /app/schema/user.js
+mongosh --host mongodb.vrpproducts.online < /app/schema/user.js
 ```
 
 If we get openssl error,

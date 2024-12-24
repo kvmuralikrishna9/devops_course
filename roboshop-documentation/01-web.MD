@@ -1,4 +1,4 @@
-# 01-WEB
+# WEB
 
 * The Web/Frontend is the service in RoboShop to serve the web content over Nginx. 
 * This will have the web page for the web application.
