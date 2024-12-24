@@ -109,18 +109,19 @@ gpgkey=https://pgp.mongodb.com/server-7.0.asc
 ```
 yum install mongodb-mongosh -y
 ```
-If we get openssl error,
-```
-yum remove mongodb-mongosh -y
-yum install mongodb-mongosh-shared-openssl3
-yum install mongodb-mongosh -y
-systemctl restart catalouge.service
-```
 
 Load Schema
 
 ```
 mongosh --host MONGODB-SERVER-IPADDRESS < /app/schema/user.js
+```
+
+If we get openssl error,
+```
+yum remove mongodb-mongosh -y
+yum install mongodb-mongosh-shared-openssl3 -y
+yum install mongodb-mongosh -y
+systemctl restart user.service
 ```
 
 

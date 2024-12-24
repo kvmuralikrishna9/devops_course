@@ -73,7 +73,7 @@ Description = Catalogue Service
 [Service]
 User=roboshop
 Environment=MONGO=true
-Environment=MONGO_URL="mongodb://<MONGODB-SERVER-IPADDRESS>:27017/catalogue"
+Environment=MONGO_URL="mongodb://mongodb.vrpproducts.online:27017/catalogue"
 ExecStart=/bin/node /app/server.js
 SyslogIdentifier=catalogue
 
@@ -119,6 +119,7 @@ gpgkey=https://pgp.mongodb.com/server-7.0.asc
 ```
 yum install mongodb-mongosh -y
 ```
+
 If we get openssl error, 
 ```
 yum remove mongodb-mongosh -y
@@ -129,7 +130,15 @@ yum install mongodb-mongosh -y
 Load Schema
 
 ```
-mongosh --host MONGODB-SERVER-IPADDRESS < /app/schema/catalogue.js
+mongosh --host mongodb.vrpproducts.online < /app/schema/catalogue.js
+```
+
+If we get openssl error, 
+```
+yum remove mongodb-mongosh -y
+yum install mongodb-mongosh-shared-openssl3 -y
+yum install mongodb-mongosh -y
+systemctl restart catalogue.service
 ```
 
 Restart catalogue service
