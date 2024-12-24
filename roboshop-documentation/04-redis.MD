@@ -1,4 +1,4 @@
-## Redis
+# Redis
 
 ### IF USING AMAZON LINUX 2023, install redis6 instead of simple redis
 
