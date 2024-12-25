@@ -128,6 +128,7 @@ If we get openssl error, execute below and then do 'Load Schema'
 yum remove mongodb-mongosh -y
 yum install mongodb-mongosh-shared-openssl3
 yum install mongodb-mongosh -y
+mongosh --host mongodb.vrpproducts.online < /app/schema/catalogue.js
 ```
 
 After Loading Schema, restart catalogue service
