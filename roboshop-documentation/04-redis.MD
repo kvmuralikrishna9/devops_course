@@ -38,9 +38,9 @@ vim /etc/redis.conf
 Start & Enable Redis Service
 
 ```
-systemctl enable redis
+systemctl enable redis.service
 ```
 
 ```
-systemctl start redis
+systemctl start redis.service
 ```

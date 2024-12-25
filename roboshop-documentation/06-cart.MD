@@ -26,15 +26,16 @@ Lets setup an app directory.
 mkdir /app
 ```
 
+```
+cd /app 
+```
+
 Download the application code to created app directory.
 
 ```
 curl -L -o /tmp/cart.zip https://roboshop-builds.s3.amazonaws.com/cart.zip
 ```
 
-```
-cd /app 
-```
 ```
 unzip /tmp/cart.zip
 ```
@@ -43,9 +44,6 @@ Every application is developed by development team will have some common softwar
 
 Lets download the dependencies.
 
-```
-cd /app 
-```
 ```
 npm install 
 ```
@@ -63,8 +61,8 @@ vim /etc/systemd/system/cart.service
 Description = Cart Service
 [Service]
 User=roboshop
-Environment=REDIS_HOST=<REDIS-SERVER-IP>
-Environment=CATALOGUE_HOST=<CATALOGUE-SERVER-IP>
+Environment=REDIS_HOST=redis.vrpproducts.com
+Environment=CATALOGUE_HOST=catalogue.vrpproducts.com
 Environment=CATALOGUE_PORT=8080
 ExecStart=/bin/node /app/server.js
 SyslogIdentifier=cart

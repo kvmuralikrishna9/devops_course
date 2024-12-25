@@ -1,4 +1,4 @@
-### Catalogue
+# Catalogue
 Catalogue is a microservice that is responsible for serving the list of products that displays in roboshop application.
 
 Setup NodeJS repos. Vendor is providing a script to setup the repos.
@@ -52,9 +52,6 @@ Every application is developed by development team will have some common softwar
 Lets download the dependencies.
 
 ```
-cd /app
-```
-```
 npm install 
 ```
 
@@ -90,10 +87,10 @@ systemctl daemon-reload
 Start the service.
 
 ```
-systemctl enable catalogue
+systemctl enable catalogue.service
 ```
 ```
-systemctl start catalogue
+systemctl start catalogue.service
 ```
 
 * For the application to work fully functional we need to load schema to the Database.

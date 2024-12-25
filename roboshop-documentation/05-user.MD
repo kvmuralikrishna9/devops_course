@@ -27,6 +27,10 @@ Lets setup an app directory.
 mkdir /app
 ```
 
+```
+cd /app 
+```
+
 Download the application code to created app directory.
 
 ```
@@ -41,9 +45,6 @@ Every application is developed by development team will have some common softwar
 
 Lets download the dependencies.
 
-```
-cd /app 
-```
 ```
 npm install 
 ```
@@ -62,7 +63,7 @@ Description = User Service
 [Service]
 User=roboshop
 Environment=MONGO=true
-Environment=REDIS_HOST=redis6.vrpproducts.online
+Environment=REDIS_HOST=redis.vrpproducts.online
 Environment=MONGO_URL="mongodb://mongodb.vrpproducts.online:27017/users"
 ExecStart=/bin/node /app/server.js
 SyslogIdentifier=user
@@ -78,10 +79,10 @@ systemctl daemon-reload
 ```
 
 ```
-systemctl enable user 
+systemctl enable user.service
 ```
 ```
-systemctl start user
+systemctl start user.service
 ```
 
 For the application to work fully functional we need to load schema to the Database. Then

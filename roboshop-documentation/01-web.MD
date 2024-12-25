@@ -11,10 +11,10 @@ yum install nginx -y
 
 Start & Enable Nginx service 
 ```
-systemctl enable nginx
+systemctl enable nginx.service
 ```
 ```
-systemctl start nginx
+systemctl start nginx.service
 ```
 
 Try to access the service once over the browser and ensure you get some default content.
@@ -48,7 +48,7 @@ Try to access the nginx service once more over the browser and ensure you get ro
 Create Nginx Reverse Proxy Configuration.
 
 ``` 
-vim /etc/nginx/default.d/roboshop.conf 
+vim /etc/nginx/default.d/roboshop.conf
 ```
 
 Add the following content 
@@ -76,5 +76,5 @@ Ensure you replace the `localhost` with the actual ip address of those component
 Restart Nginx Service to load the changes of the configuration.
 
 ``` 
-systemctl restart nginx 
+systemctl restart nginx.service 
 ```
