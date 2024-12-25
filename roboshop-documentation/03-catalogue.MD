@@ -117,24 +117,20 @@ gpgkey=https://pgp.mongodb.com/server-7.0.asc
 yum install mongodb-mongosh -y
 ```
 
-If we get openssl error, 
-```
-yum remove mongodb-mongosh -y
-yum install mongodb-mongosh-shared-openssl3
-yum install mongodb-mongosh -y
-```
-
 Load Schema
 
 ```
 mongosh --host mongodb.vrpproducts.online < /app/schema/catalogue.js
 ```
 
+If we get openssl error, execute below and then do 'Load Schema'
 ```
-systemctl restart catalogue.service
+yum remove mongodb-mongosh -y
+yum install mongodb-mongosh-shared-openssl3
+yum install mongodb-mongosh -y
 ```
 
-Restart catalogue service
+After Loading Schema, restart catalogue service
 ```
 systemctl restart catalogue.service
 ```
