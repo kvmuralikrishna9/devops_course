@@ -42,11 +42,12 @@ unzip /tmp/cart.zip
 
 Every application is developed by development team will have some common softwares that they use as libraries. This application also have the same way of defined dependencies in the application configuration.
 
-Lets download the dependencies.
+Lets download the dependencies. 
 
 ```
 npm install 
 ```
+Note: While installing dependencies, If we see depricated dependencied error, we can ignore
 
 We need to setup a new service in systemd so systemctl can manage this service
 
@@ -61,8 +62,8 @@ vim /etc/systemd/system/cart.service
 Description = Cart Service
 [Service]
 User=roboshop
-Environment=REDIS_HOST=redis.vrpproducts.com
-Environment=CATALOGUE_HOST=catalogue.vrpproducts.com
+Environment=REDIS_HOST=redis.vrpproducts.online
+Environment=CATALOGUE_HOST=catalogue.vrpproducts.online
 Environment=CATALOGUE_PORT=8080
 ExecStart=/bin/node /app/server.js
 SyslogIdentifier=cart
@@ -78,8 +79,8 @@ systemctl daemon-reload
 ```
 
 ```
-systemctl enable cart 
+systemctl enable cart.service
 ```
 ```
-systemctl start cart
+systemctl start cart.service
 ```

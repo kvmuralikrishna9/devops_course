@@ -54,6 +54,7 @@ Lets download the dependencies.
 ```
 npm install 
 ```
+Note: While installing dependencies, If we see depricated dependencied error, we can ignore
 
 We need to setup a new service in systemd so systemctl can manage this service
 

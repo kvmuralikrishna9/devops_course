@@ -115,12 +115,17 @@ Load Schema
 mongosh --host mongodb.vrpproducts.online < /app/schema/user.js
 ```
 
-If we get openssl error,
+If we get openssl error, execute below and then do 'Load Schema'
+
 ```
 yum remove mongodb-mongosh -y
-yum install mongodb-mongosh-shared-openssl3 -y
+yum install mongodb-mongosh-shared-openssl3
 yum install mongodb-mongosh -y
-systemctl restart user.service
+mongosh --host mongodb.vrpproducts.online < /app/schema/user.js
 ```
 
+After Loading Schema, restart user service
 
+```
+systemctl restart user.service
+```
