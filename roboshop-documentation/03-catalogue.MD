@@ -10,7 +10,7 @@ curl -sL https://rpm.nodesource.com/setup_lts.x | bash
 Install NodeJS
 
 ```
-yum install nodejs -y
+dnf install nodejs -y
 ```
 
 Configure the application.
@@ -115,7 +115,7 @@ enabled=1
 gpgkey=https://pgp.mongodb.com/server-7.0.asc
 ```
 ```
-yum install mongodb-mongosh -y
+dnf install mongodb-mongosh -y
 ```
 
 Load Schema
@@ -126,9 +126,9 @@ mongosh --host mongodb.vrpproducts.online < /app/schema/catalogue.js
 
 If we get openssl error, execute below and then do 'Load Schema'
 ```
-yum remove mongodb-mongosh -y
-yum install mongodb-mongosh-shared-openssl3 -y
-yum install mongodb-mongosh -y
+dnf remove mongodb-mongosh -y
+dnf install mongodb-mongosh-shared-openssl3 -y
+dnf install mongodb-mongosh -y
 mongosh --host mongodb.vrpproducts.online < /app/schema/catalogue.js
 ```
 

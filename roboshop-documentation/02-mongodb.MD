@@ -19,7 +19,7 @@ gpgkey=https://pgp.mongodb.com/server-7.0.asc
 
 Install MongoDB
 ```
-yum install mongodb-org -y
+dnf install mongodb-org -y
 ```
 
 Start & Enable MongoDB Service
